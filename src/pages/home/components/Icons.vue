@@ -17,60 +17,23 @@
 <script type="text/javascript">
 	export default {
 		name: 'HomeIcons',
+		props: {
+			list: Array
+		},
 		data () {
 			return {
 				swiperOption: {
 					loop: true,
-					pagination: '.swiper-pagination'
-				},
-				iconList: [{
-					id: '0001',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '景点门票'
-				}, {
-					id: '0002',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '泡温泉'
-				}, {
-					id: '0003',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '大粉不'
-				},
-				{
-					id: '0004',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '大歪不'
-				},
-				{
-					id: '0005',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '小歪不'
-				},
-				{
-					id: '0006',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '小心心'
-				},
-				{
-					id: '0007',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '小熊熊'
-				},{
-					id: '0008',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '小不不'
-				},{
-					id: '0009',
-					imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-					desc: '小阿不'
-				}]
+					pagination: '.swiper-pagination',
+					autoplay: false
+				}
 			}
 		},
 
 		computed: {
 			pages () {
 				const pages = []
-				this.iconList.forEach((item, index) => {
+				this.list.forEach((item, index) => {
 					const page = Math.floor(index / 8)
 					if(!pages[page]) {
 						pages[page] = []

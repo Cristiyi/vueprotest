@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">热销推荐</div>
 		<ul>
-			<li class="item border-bottom" v-for="item of recomendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 				<img class="item-img" :src="item.imgUrl">
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script type="text/javascript">
 	export default {
 		name: 'HomeRecommend',
-		data () {
-			return {
-				recomendList: [{
-				id: '0001',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			},
-			{
-				id: '0002',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			},
-			{
-				id: '0003',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			}
-			]}
+		props: {
+			list: Array
 		}
 	}
 </script>

@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">周末去哪</div>
 		<ul>
-			<li class="item border-bottom" v-for="item of recomendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 				<div><img class="item-img" :src="item.imgUrl"></div>
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -16,28 +16,10 @@
 <script type="text/javascript">
 	export default {
 		name: 'HomeWeekend',
-		data () {
-			return {
-				recomendList: [{
-				id: '0001',
-				imgUrl: 'http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			},
-			{
-				id: '0002',
-				imgUrl: 'http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			},
-			{
-				id: '0003',
-				imgUrl: 'http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg',
-				title: '大连圣亚海洋馆',
-				desc: '浪漫大连首战，哈哈哈哈啊哈哈'
-			}
-			]}
-		}
+		props: {
+			list: Array
+		},
+		
 	}
 </script>
 
