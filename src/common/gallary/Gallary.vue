@@ -48,7 +48,7 @@
 		display: flex
 		flex-direction: column
 		justify-content: center
-		z-index: 0
+		z-index: 3
 		position: fixed
 		left: 0
 		right: 0
